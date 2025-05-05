@@ -75,5 +75,24 @@ int main()
     
     vector<string> :: iterator it;
     it = find(names.begin(),names.end(),"San");
-    cout << "Found at index " << it - names.begin() << endl;
+    cout << "San Found at index " << it - names.begin() << " - " << count(names.begin(),names.end(),"San")<<" Time(s)\n" << endl;
+
+    sort(names.begin(),names.end());
+
+    for(i = names.begin();i!=names.end();i++)
+    {
+        cout << *i << endl;
+    }
+    cout << "\n" << endl;
+
+    vector<string> ateez(names.begin(),names.end());
+    vector<string> txt {"Soobin","Yeonjun","Taehyun","Huening Kai","Beomgyu"};
+    vector<string> mem(ateez.size()+txt.size());
+    merge(ateez.begin(),ateez.end(),txt.begin(),txt.end(),mem.begin());
+    sort(mem.begin(),mem.end());
+    
+    for(i = mem.begin();i!=mem.end();i++)
+    {
+        cout << *i << endl;
+    }
 }
