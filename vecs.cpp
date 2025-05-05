@@ -90,9 +90,11 @@ int main()
     vector<string> mem(ateez.size()+txt.size());
     merge(ateez.begin(),ateez.end(),txt.begin(),txt.end(),mem.begin());
     sort(mem.begin(),mem.end());
-    
+    string thelast = mem.at(12);
     for(i = mem.begin();i!=mem.end();i++)
     {
         cout << *i << endl;
     }
+
+    cout << "\n" << thelast <<endl;
 }
