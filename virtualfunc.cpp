@@ -14,11 +14,13 @@ class Shape
             b = c;
         }
 
-        virtual void area()
-        {
-           cout << "Loser" << endl;
-        }
+        virtual void area();
 };
+
+void Shape :: area()
+{
+   cout << "Loser" << endl;
+}
 
 class Square : public Shape
 {

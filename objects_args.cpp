@@ -27,7 +27,14 @@ class Distance
         }
     //function declaration    
         void add_dist(Distance,Distance);
+
+    friend void hello();
 };
+
+void hello()
+{
+    cout << "Hello World" << endl;
+}
 
 //defining member functions outside the class
 void Distance :: add_dist(Distance d2,Distance d3)     // :: is the scope resolution operator specifies the associated class
@@ -54,6 +61,9 @@ int main()
     cout << "\ndist 2 = ";    dist2.showdist();
     cout << "\ndist 3 = ";    dist3.showdist();
     cout << endl;
+
+    hello();
+    
     cin.get(); 
     return 0;
 }
